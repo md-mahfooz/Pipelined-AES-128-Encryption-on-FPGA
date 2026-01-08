@@ -37,11 +37,22 @@ The design focuses on improving throughput by overlapping multiple AES rounds us
 ---
 
 ## Repository Structure
-
-The repository contains:
-- AES core modules
-- Key expansion modules
-- Testbench files for verification
-- FPGA-related configuration files
-
----
+```
+.
+├── rtl
+│   ├── AESEncrypt.v
+│   ├── AddRoundKey.v
+│   ├── SubBytes.v
+│   ├── ShiftRows.v
+│   ├── MixColumns.v
+│   ├── KeyGen.v
+│   ├── SubTable.v
+│   └── Update.v
+├── software
+│   └── vitis.c
+├── testbench
+│   └── test_AES128.v
+├── report
+│   └── AES_Pipelined.pdf
+└── README.md
+```
